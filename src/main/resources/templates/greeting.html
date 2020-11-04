@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+    <p th:text="'Licorera, ' + ${name} + '!'"/>
+
+    <table>
+        <th:block th:each="prod : ${productos}">
+            <tr>
+                <td th:text="${prod.IdProductos}"></td>
+                <td th:text="${prod.Nombre_producto}"></td>
+                <td th:text="${prod.Valor_producto}"></td>
+                <td th:text="${prod.Ganancia}"></td>
+                <td th:text="${prod.Valor_venta}"></td>
+            </tr>
+        </th:block>
+    </table>
+</body>
+</html>
